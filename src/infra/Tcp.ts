@@ -23,8 +23,6 @@ export class Tcp implements IService {
   async init() {
     const { server, routePrefix } = this;
 
-    server.use(express.json());
-
     useExpressServer(server, {
       routePrefix,
       controllers,
